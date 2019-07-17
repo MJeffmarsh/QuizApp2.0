@@ -9,19 +9,21 @@
     <header>
         <span>0/10</span>
     </header>
-    <div id="quiz-box" class="quiz-box">
-        <form>
+    <section id="quiz-box" class="quiz-box">
             <div class="quiz-name">Legend of Zelda 101</div>
-            <div class="question">Your Question Here</div>
-            <label class="option"><input type="radio" name="option" value="1" />option 1<span id="opt1"></span></label>
-            <label class="option"><input type="radio" name="option" value="2" />option 2<span id="opt2"></span></label>
-            <label class="option"><input type="radio" name="option" value="3" />option 3<span id="opt3"></span></label>
-            <label class="option"><input type="radio" name="option" value="4" />option 4<span id="opt4"></span></label>
-            <button class="sub-btn" type="submit" value="submit">Submit</button>
+            <div class="question">${questions.prompt}</div>
+        <form>
+            <fieldset>
+                <label class="options"><input type="radio" name="option" value="1" />A. <span id="opt1">${questions.ans1}</span></label>
+                <label class="options"><input type="radio" name="option" value="2" />B. <span id="opt2">${questions.ans1}</span></label>
+                <label class="options"><input type="radio" name="option" value="3" />C. <span id="opt3">${questions.ans1}</span></label>
+                <label class="options"><input type="radio" name="option" value="4" />D. <span id="opt4">${questions.ans1}</span></label>
+                <button class="sub-btn" type="submit" value="submit">Submit</button>
+            </fieldset>   
         </form>
 
         
-    </div>
-    <span><a href="page3.html">Feedback</a></span>
+    </section>
+    
 </body>
 </html>

@@ -7,6 +7,10 @@ header span {
     font-size: 40px;
 }
 
+fieldset {
+    border: none;
+}
+
 .quiz-box {
     position: absolute;
     height: 450px;
@@ -35,7 +39,7 @@ header span {
     
 }
 
-.option {
+.options {
     display: block;
     margin: 30px auto;
     margin-bottom: 0;

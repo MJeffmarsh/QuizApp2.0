@@ -5,16 +5,23 @@
   
     <title>Start</title>
     <link href="index.css" rel="stylesheet" type="text/css">
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </head>
 <body>
-  <div id="quiz-box" class="quiz-box">
-                <form>
-                    <div class="quiz-name">Legend of Zelda 101</div>
-                    
+    <header>
+     <h2>Question: <span class="currentQuestion">0</span>/10</h2>
+     <h2>Score: <span class="score">0</span></h2>
+    </header>
+  <section id="quiz-box" class="quiz-box">
+     <div class="quiz-name">Legend of Zelda 101</div>   
+
                    
-                    <button class="start-btn" type="submit" value="submit"><a href="page2.html">Start</a></button>
-                </form>
+      <div class='start'><button type="button" class="start-btn">Start</button></div>
         
-            </div>
-        </body>
+  </section>
+ </body>
 </html>
