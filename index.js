@@ -49,34 +49,75 @@ const questions = [
 let currentQuestion = 0;
 let score = 0;
 
-function renderPromt () {
- return `<div class="quiz-name">Legend of Zelda 101</div>
- <div class="question">${questions.prompt}</div>
+function renderPrompt () {
+ return `<div class="question"><h2>${questions[currentQuestion].prompt}</h2></div>
 <form>
  <fieldset>
-     <label class="options"><input type="radio" name="option" value="1" />A. <span id="opt1">${questions.ans1}</span></label>
-     <label class="options"><input type="radio" name="option" value="2" />B. <span id="opt2">${questions.ans1}</span></label>
-     <label class="options"><input type="radio" name="option" value="3" />C. <span id="opt3">${questions.ans1}</span></label>
-     <label class="options"><input type="radio" name="option" value="4" />D. <span id="opt4">${questions.ans1}</span></label>
-     <button class="sub-btn" type="submit" value="submit">Submit</button>
+     <label class="options"><input type="radio" name="option" value="1" required />A. <span id="opt1">${questions[currentQuestion].ans1}</span></label>
+     <label class="options"><input type="radio" name="option" value="2" required />B. <span id="opt2">${questions[currentQuestion].ans2}</span></label>
+     <label class="options"><input type="radio" name="option" value="3" required />C. <span id="opt3">${questions[currentQuestion].ans3}</span></label>
+     <label class="options"><input type="radio" name="option" value="4" required />D. <span id="opt4">${questions[currentQuestion].ans4}</span></label>
+     <button type="submit" class="sub-btn" >Submit</button>
  </fieldset>   
 </form>`;  
+}
+
+function updateQuestionNum () {
+    currentQuestion ++;
+    $('.currentQuestion').text(currentQuestion);
+}
+
+function raiseScore () {
+    score ++;
+    $('.score').text(score);
 }
 
 function quizStart () {
     $('.quiz-box').on('click', ".start-btn",
     function (event) {
         $('.start').remove();
-        
+        $('.quiz-box').html(renderPrompt());
+        updateQuestionNum();
     });
 }
 
-function nextPrompt () {
+const isCorrect = `<div class="isRight"><h3>Correct!</h3></div>
+    <button class="next-btn" type="button" >Next</button>`;
 
+
+const isWrong = `<div class="isWrong"><h3>Wrong! The correct answer is ${questions[currentQuestion].answer}!</h3></div>
+      <button class="next-btn" type="button" >Next</button>`;
+
+
+/*function nextQuestion () {
+    $('.quiz-box').on('click', ".next-btn", function (event) {
+        questions ++ });
+}*/
+
+function feedback () {
+    $('.quiz-box').on('submit', 'sub-btn', function (event) {
+        event.preventDefault();
+        let marked = $('input:checked');
+        let markedAnswer = marked.val();
+        let correctAnswer = `${questions[currentQuestion].correct}`;
+        if (markedAnswer === correctAnswer) {
+            $('.quiz-box').html(isRight);
+        } else {
+            $('.quiz-box').html(isWrong);
+        }
+        updateQuestionNum();
+    });
 }
+
+
+
+
+
+
 
 function runQuiz () {
     quizStart();
+    feedback();
 }
 
 $(runQuiz);

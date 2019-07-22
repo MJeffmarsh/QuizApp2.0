@@ -35,13 +35,14 @@ fieldset {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 5px;
+    font-size: 10px;
     
 }
 
 .options {
     display: block;
-    margin: 30px auto;
+    margin: 20px auto;
     margin-bottom: 0;
     background-color: grey;
     height: 50px;
@@ -78,3 +79,9 @@ fieldset {
     font-size: 20px;
 }
 
+.legend {
+    display: flex;
+    justify-content: space-between;
+    margin: 500px 20px;
+    font-size: 50px;
+}
