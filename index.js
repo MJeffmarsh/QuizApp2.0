@@ -53,10 +53,10 @@ function renderPrompt () {
  return `<div class="question"><h2>${questions[currentQuestion].prompt}</h2></div>
 <form>
  <fieldset>
-     <label class="options"><input type="radio" name="option" value="1" required />A. <span id="opt1">${questions[currentQuestion].ans1}</span></label>
-     <label class="options"><input type="radio" name="option" value="2" required />B. <span id="opt2">${questions[currentQuestion].ans2}</span></label>
-     <label class="options"><input type="radio" name="option" value="3" required />C. <span id="opt3">${questions[currentQuestion].ans3}</span></label>
-     <label class="options"><input type="radio" name="option" value="4" required />D. <span id="opt4">${questions[currentQuestion].ans4}</span></label>
+     <label class="options"><input type="radio" name="option" value="1" required />A. <span >${questions[currentQuestion].ans1}</span></label>
+     <label class="options"><input type="radio" name="option" value="2" required />B. <span >${questions[currentQuestion].ans2}</span></label>
+     <label class="options"><input type="radio" name="option" value="3" required />C. <span >${questions[currentQuestion].ans3}</span></label>
+     <label class="options"><input type="radio" name="option" value="4" required />D. <span >${questions[currentQuestion].ans4}</span></label>
      <button type="submit" class="sub-btn" >Submit</button>
  </fieldset>   
 </form>`;  
@@ -81,31 +81,29 @@ function quizStart () {
     });
 }
 
-const isCorrect = `<div class="isRight"><h3>Correct!</h3></div>
+let isRight = `<div class="isRight"><h3>Correct!</h3></div>
     <button class="next-btn" type="button" >Next</button>`;
 
 
-const isWrong = `<div class="isWrong"><h3>Wrong! The correct answer is ${questions[currentQuestion].answer}!</h3></div>
+let isWrong =  `<div class="isWrong"><h3>Wrong! The correct answer is ${questions[currentQuestion].correct}!</h3></div>
       <button class="next-btn" type="button" >Next</button>`;
 
 
 /*function nextQuestion () {
     $('.quiz-box').on('click', ".next-btn", function (event) {
-        questions ++ });
+         });
 }*/
 
 function feedback () {
-    $('.quiz-box').on('submit', 'sub-btn', function (event) {
+    $('.quiz-box').on('submit', function (event) {
         event.preventDefault();
-        let marked = $('input:checked');
-        let markedAnswer = marked.val();
-        let correctAnswer = `${questions[currentQuestion].correct}`;
-        if (markedAnswer === correctAnswer) {
+        let markedOption = $('.options:checked');
+        let correctOption = `${questions[currentQuestion].correct}`;
+        if (markedOption === correctOption) {
             $('.quiz-box').html(isRight);
         } else {
             $('.quiz-box').html(isWrong);
         }
-        updateQuestionNum();
     });
 }
 
@@ -118,6 +116,7 @@ function feedback () {
 function runQuiz () {
     quizStart();
     feedback();
+    //nextQuestion();
 }
 
 $(runQuiz);
