@@ -97,7 +97,7 @@ let isWrong =  `<div class="isWrong"><h3>Wrong! The correct answer is ${question
 function feedback () {
     $('.quiz-box').on('submit', function (event) {
         event.preventDefault();
-        let markedOption = $('.options:checked');
+        let markedOption = $('input:checked');
         let correctOption = `${questions[currentQuestion].correct}`;
         if (markedOption === correctOption) {
             $('.quiz-box').html(isRight);
