@@ -53,10 +53,10 @@ function renderPrompt () {
  return `<div class="question"><h2>${questions[currentQuestion].prompt}</h2></div>
 <form>
  <fieldset>
-     <label class="options"><input type="radio" name="option" value="1" required />A. <span >${questions[currentQuestion].ans1}</span></label>
-     <label class="options"><input type="radio" name="option" value="2" required />B. <span >${questions[currentQuestion].ans2}</span></label>
-     <label class="options"><input type="radio" name="option" value="3" required />C. <span >${questions[currentQuestion].ans3}</span></label>
-     <label class="options"><input type="radio" name="option" value="4" required />D. <span >${questions[currentQuestion].ans4}</span></label>
+     <label class="options"><input type="radio" name="option" value='${questions[currentQuestion].ans1}' required />A. <span >${questions[currentQuestion].ans1}</span></label>
+     <label class="options"><input type="radio" name="option" value='${questions[currentQuestion].ans2}' required />B. <span >${questions[currentQuestion].ans2}</span></label>
+     <label class="options"><input type="radio" name="option" value='${questions[currentQuestion].ans3}' required />C. <span >${questions[currentQuestion].ans3}</span></label>
+     <label class="options"><input type="radio" name="option" value='${questions[currentQuestion].ans4}' required />D. <span >${questions[currentQuestion].ans4}</span></label>
      <button type="submit" class="sub-btn" >Submit</button>
  </fieldset>   
 </form>`;  
@@ -88,17 +88,26 @@ let isRight = `<div class="isRight"><h3>Correct!</h3></div>
 let isWrong =  `<div class="isWrong"><h3>Wrong! The correct answer is ${questions[currentQuestion].correct}!</h3></div>
       <button class="next-btn" type="button" >Next</button>`;
 
+function isCorrectOption () {
+    if ($('input:checkd') === `${questions[currentQuestion].correct}`) {
+        return true
+    } else {return false
+    }
+}
 
-/*function nextQuestion () {
+function nextQuestion () {
     $('.quiz-box').on('click', ".next-btn", function (event) {
+        updateQuestionNum();
+        $('.quiz-box').html(renderPrompt());
          });
-}*/
+}
 
 function feedback () {
     $('.quiz-box').on('submit', function (event) {
         event.preventDefault();
-        let markedOption = $('input:checked');
-        let correctOption = `${questions[currentQuestion].correct}`;
+        let markedOption = $('input:checked').val();
+        let correctOption = questions[currentQuestion -1].correct;
+        console.log(markedOption, correctOption)
         if (markedOption === correctOption) {
             $('.quiz-box').html(isRight);
         } else {
@@ -116,7 +125,7 @@ function feedback () {
 function runQuiz () {
     quizStart();
     feedback();
-    //nextQuestion();
+    nextQuestion();
 }
 
 $(runQuiz);
