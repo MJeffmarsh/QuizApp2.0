@@ -53,10 +53,10 @@ function renderPrompt () {
  return `<div class="question"><h2>${questions[currentQuestion-1].prompt}</h2></div>
 <form>
  <fieldset>
-     <label class="options"><input type="radio" name="option" value='${questions[currentQuestion-1].ans1}' required /><span >  ${questions[currentQuestion-1].ans1}</span></label>
-     <label class="options"><input type="radio" name="option" value='${questions[currentQuestion-1].ans2}' required /><span >  ${questions[currentQuestion-1].ans2}</span></label>
-     <label class="options"><input type="radio" name="option" value='${questions[currentQuestion-1].ans3}' required /><span >  ${questions[currentQuestion-1].ans3}</span></label>
-     <label class="options"><input type="radio" name="option" value='${questions[currentQuestion-1].ans4}' required /><span >  ${questions[currentQuestion-1].ans4}</span></label>
+     <label class="options"><input type="radio" name="option" value='${questions[currentQuestion-1].ans1}' required /><span>  ${questions[currentQuestion-1].ans1}</span></label>
+     <label class="options"><input type="radio" name="option" value='${questions[currentQuestion-1].ans2}' required /><span>  ${questions[currentQuestion-1].ans2}</span></label>
+     <label class="options"><input type="radio" name="option" value='${questions[currentQuestion-1].ans3}' required /><span>  ${questions[currentQuestion-1].ans3}</span></label>
+     <label class="options"><input type="radio" name="option" value='${questions[currentQuestion-1].ans4}' required /><span>  ${questions[currentQuestion-1].ans4}</span></label>
      <button type="submit" class="sub-btn" >Submit</button>
  </fieldset>   
 </form>`;  

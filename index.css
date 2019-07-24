@@ -30,10 +30,21 @@ body {
     background-attachment: fixed;
     background-position: center;
 }
+h3, h2 {
+    text-shadow:
+		-1px -1px  0 white,
+		1px -1px 0 white,
+		-1px 1px 0 white,
+		1px 1px 0 white;
+}
 
 
-header span {
-    font-size: 40px;
+.quiz-name, .legend, button {
+    text-shadow:
+		-1px -1px  0 white,
+		1px -1px 0 white,
+		-1px 1px 0 white,
+		1px 1px 0 white;
 }
 
 button {
@@ -48,6 +59,11 @@ button {
 button:hover {
     background-color:darkblue;
     color: rgb(192, 192, 192);
+    text-shadow:
+		-1px -1px 0 black,
+		1px -1px 0 black,
+		-1px 1px 0 black,
+		1px 1px 0 black;
 }
 
 
@@ -95,6 +111,11 @@ fieldset {
     font-weight: bold;
     background-color: darkblue;
     color: gold;
+    text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
 }
 
 .options:hover {
