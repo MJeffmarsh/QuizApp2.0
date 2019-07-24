@@ -146,6 +146,12 @@ fieldset {
     font-size: 20px;
 }
 
+.restart {
+    margin-top: 5px;
+    height: 50px;
+    width: 75px;
+}
+
 .legend {
     display: flex;
     justify-content: space-between;
