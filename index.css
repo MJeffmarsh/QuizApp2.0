@@ -22,7 +22,7 @@
     src: local('Cinzel Decorative Black'), local('CinzelDecorative-Black'), url(https://fonts.gstatic.com/s/cinzeldecorative/v8/daaHSScvJGqLYhG8nNt8KPPswUAPniZQa9lESTE.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
-
+/*universal*/
 body {
     font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif;
     background-image: url('https://cdn.wallpapersafari.com/58/70/yd7VFT.jpg');
@@ -47,6 +47,14 @@ h3, h2 {
 		1px 1px 0 white;
 }
 
+.legend {
+    display: flex;
+    justify-content: space-between;
+    margin: 500px 0px 20px 20px;
+    font-size: 50px;
+}
+
+/*buttons*/
 button {
     border-radius: 20%;
     width: 20%;
@@ -66,7 +74,34 @@ button:hover {
 		1px 1px 0 black;
 }
 
+.sub-btn {
+    display: block;
+    margin: 10px auto;
+}
 
+.start-btn {
+    display: block;
+    margin: 200px auto;
+    height: 50px;
+    width: 100px;
+    font-size: 25px;
+}
+
+.cont-btn {
+    display: block;
+    margin: 50px auto;
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+}
+
+.restart {
+    margin-top: 5px;
+    height: 50px;
+    width: 75px;
+}
+
+/*Quiz*/
 fieldset {
     border: none;
 }
@@ -122,23 +157,8 @@ fieldset {
     background-color: red;
 }
 
-.quiz-box .options:checked {
-    opacity: 1;
+input[type="radio"]:focus {
     background-color: red;
-}
-
-
-.sub-btn {
-    display: block;
-    margin: 10px auto;
-}
-
-.start-btn {
-    display: block;
-    margin: 200px auto;
-    height: 50px;
-    width: 100px;
-    font-size: 25px;
 }
 
 .feedback {
@@ -159,23 +179,78 @@ fieldset {
     height: 150px; 
 }
 
-.cont-btn {
-    display: block;
-    margin: 50px auto;
-    height: 50px;
-    width: 200px;
-    font-size: 20px;
-}
+@media only screen and (max-width: 750px) {
+    .quiz-box {
+      height: 325px;
+      width: 325px;
+    }
 
-.restart {
-    margin-top: 5px;
-    height: 50px;
-    width: 75px;
-}
+    .quiz-name {
+      font-size: 0.75rem;
+    }
 
-.legend {
-    display: flex;
-    justify-content: space-between;
-    margin: 500px 0px 20px 20px;
-    font-size: 50px;
+    .legend {
+      font-size: 0.9rem;
+    }
+
+    .start-btn {
+      margin: 120px auto; 
+      height: 100px;
+      width: 150px;
+    }
+
+    .options {
+      width: 300px;
+      height: 20px;
+      font-size: 10px;
+    }
+
+    .sub-btn {
+     height: 50px;
+     width: 100px;
+     margin-top: 15px ;
+    }
+
+    .feedback {
+      font-size: 10px;
+      margin-top: 50px;
+    }
+
+    .feedback h3 {
+      padding: 0 15px;
+    }
+
+    .question {
+      display: inline-block;
+      font-size: 7.75px;
+      margin-bottom: 1px;
+    }
+
+    #wrong img {
+    width: 50px;
+    height: 100px;
+    }
+
+    #right img {
+    width: 100px;
+    height: 100px;
+    }
+
+    #results img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .cont-btn {
+      margin: auto;
+      height: 50px;
+      width: 150px;
+    }
+
+    .restart {
+      margin-top: 20px;
+      height: 75px;
+      width: 100px;
+    }
+
 }
