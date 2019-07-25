@@ -81,18 +81,18 @@ function quizStart () {
 }
 
 function optionRight () { return `<div class="feedback" id="right"><div><h3>Correct!</h3></div>
-    <img src="https://media.giphy.com/media/VSJLRTebfPgnS/200.gif" alt="GIF of a rotating heart container">
+    <img src="https://media.giphy.com/media/VSJLRTebfPgnS/200.gif" alt="rotating heart container">
     <button class="cont-btn" type="button">Continue</button></div>`;}
 
 function optionWrong () {
     return  `<div class="feedback" id="wrong"><div><h3>Hey, listen! The correct answer is ${questions[currentQuestion-1].correct}!</h3></div>
-    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bf857e07-ecf2-43db-9045-55fac2cded2c/d97jt0s-7a652102-1a0e-47e5-b057-85692ea4c21b.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2JmODU3ZTA3LWVjZjItNDNkYi05MDQ1LTU1ZmFjMmNkZWQyY1wvZDk3anQwcy03YTY1MjEwMi0xYTBlLTQ3ZTUtYjA1Ny04NTY5MmVhNGMyMWIuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.V-BR6gc8B3OI6HeJGyWD5iKwALNmkRjEygmAI46OWCc" alt="GIF of The fairy called Navi flying">
+    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bf857e07-ecf2-43db-9045-55fac2cded2c/d97jt0s-7a652102-1a0e-47e5-b057-85692ea4c21b.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2JmODU3ZTA3LWVjZjItNDNkYi05MDQ1LTU1ZmFjMmNkZWQyY1wvZDk3anQwcy03YTY1MjEwMi0xYTBlLTQ3ZTUtYjA1Ny04NTY5MmVhNGMyMWIuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.V-BR6gc8B3OI6HeJGyWD5iKwALNmkRjEygmAI46OWCc" alt="The fairy called Navi flying">
       <button class="cont-btn" type="button" >Continue</button></div>`;}  
 
 function  quizResults () {
    return `<div class="feedback" id="results">
         <div><h3>You got ${score}/5 questions right!</h3></div>
-        <img src="https://media1.giphy.com/media/EKRng3TzYyOaY/source.gif" alt="GIF of rotating Tri-force">
+        <img src="https://media1.giphy.com/media/EKRng3TzYyOaY/source.gif" alt="rotating Tri-force">
         <button class="restart" type="button">New Game</button>
     </div>`
     }      
@@ -128,16 +128,6 @@ function quizRestart () {
         location.reload();
     });
 }
-
-
-
-
-
-
-
-
-
-
 
 function runQuiz () {
     quizStart();
