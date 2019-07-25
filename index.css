@@ -77,6 +77,8 @@ button:hover {
 
 .sub-btn {
     display: block;
+    height: 35px;
+    width: 150px;
     margin: 10px auto;
 }
 
@@ -98,8 +100,8 @@ button:hover {
 
 .restart {
     margin-top: 5px;
-    height: 50px;
-    width: 75px;
+    height: 75px;
+    width: 100px;
 }
 
 /*Quiz*/
@@ -127,6 +129,17 @@ fieldset {
     margin-top: 10px;
 }
 
+.start h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow:
+		-1px -1px  0 white,
+		1px -1px 0 white,
+		-1px 1px 0 white,
+		1px 1px 0 white;
+}
+
 .question {
     display: flex;
     align-items: center;
@@ -138,6 +151,7 @@ fieldset {
 
 .options {
     display: flex;
+    align-items: center;
     margin: 20px auto;
     margin-bottom: 0;
     background-color: darkgrey;
@@ -152,6 +166,10 @@ fieldset {
     1px -1px 0 black,
     -1px 1px 0 black,
     1px 1px 0 black;
+}
+
+.options span {
+    margin-top: 3px;
 }
 
 .options:hover {
@@ -192,14 +210,15 @@ input[type="radio"]:focus {
       font-size: 0.75rem;
     }
 
-    .legend {
-      font-size: 0.9rem;
-    }
-
     .start-btn {
       margin: 150px auto; 
       height: 100px;
       width: 200px;
+    }
+
+    .start h2 {
+        font-size: 15px;
+        text-align: center;
     }
 
     .options {
@@ -255,11 +274,11 @@ input[type="radio"]:focus {
     }
 
     .legend {
-      margin-top: 400px;
+      margin-top: 20px;
     }
 
     .legend h4 {
-        font-size: 25px;
+        font-size: 20px;
     }
 }
 
@@ -274,8 +293,9 @@ input[type="radio"]:focus {
       font-size: 0.75rem;
     }
 
-    .legend {
-      font-size: 0.9rem;
+    .start h2 {
+        font-size: 15px;
+        text-align: center;
     }
 
     .start-btn {
@@ -306,7 +326,6 @@ input[type="radio"]:focus {
     }
 
     .question {
-      display: inline-block;
       font-size: 7.75px;
       margin-bottom: 1px;
     }
@@ -339,7 +358,11 @@ input[type="radio"]:focus {
     }
 
     .legend {
-      margin-top: 385px;
+      margin-top: 20px;
+    }
+
+    .legend h4 {
+        font-size: 15px;
     }
 
 }
