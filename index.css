@@ -273,10 +273,6 @@ input[type="radio"]:focus {
       width: 100px;
     }
 
-    .legend {
-      margin-top: 20px;
-    }
-
     .legend h4 {
         font-size: 20px;
     }
@@ -355,10 +351,6 @@ input[type="radio"]:focus {
       margin-top: 20px;
       height: 75px;
       width: 100px;
-    }
-
-    .legend {
-      margin-top: 20px;
     }
 
     .legend h4 {
